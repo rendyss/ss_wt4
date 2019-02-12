@@ -52,6 +52,5 @@ if ( ! class_exists( 'SSWT4_Front_Assets' ) ) {
 				wp_enqueue_script( 'custom.js', $path . '/assets/js/custom.js', array( 'jquery' ), false, true );
 			}
 		}
-
 	}
 }
