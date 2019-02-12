@@ -4,7 +4,7 @@
 <?php wp_head(); ?>
 <title><?php wp_title(); ?></title>
 
-<body>
+<body <?php echo ! $is_front_page ? "class=\"generic\"" : ""; ?>>
 
 <header id="header">
     <div class="container">
@@ -23,13 +23,3 @@
         </nav>
     </div>
 </header><!-- #header -->
-
-<?php if ( $is_front_page ) : ?>
-    <section id="hero">
-        <div class="hero-container">
-            <h1>Welcome to Regna</h1>
-            <h2>We are team of talanted designers making websites with Bootstrap</h2>
-            <a href="#about" class="btn-get-started">Get Started</a>
-        </div>
-    </section>
-<?php endif; ?>

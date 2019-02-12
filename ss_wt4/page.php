@@ -10,7 +10,13 @@ get_header();
 
 while ( have_posts() ) : the_post(); ?>
 
-    the_content();
+    <main>
+        <div class="container">
+            <div class="content">
+				<?php the_content(); ?>
+            </div>
+        </div>
+    </main>
 
 <?php endwhile;
 

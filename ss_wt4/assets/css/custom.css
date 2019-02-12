@@ -1,0 +1,164 @@
+body.generic {
+    padding-top: 92px;
+}
+
+body.generic .content {
+    background: #fff;
+    padding: 40px;
+    margin: 50px;
+}
+
+body.generic header {
+    background: rgba(52, 59, 64, 1);
+    padding: 20px 0;
+    height: 72px;
+    transition: all 0.5s;
+!important;
+}
+
+@media (max-width: 768px) {
+    body.generic .content {
+        background: #fff;
+        padding: 10px;
+        /*box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.025);*/
+        margin: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    body.generic .content {
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.025);
+    }
+}
+
+.footer-distributed {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    /*font: normal 16px sans-serif;*/
+    padding: 45px 50px;
+    /*margin-top: 80px;*/
+}
+
+.footer-distributed .footer-left p {
+    color: #8f9296;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed ul.footer-links {
+    /*font-size: 18px;*/
+    /*font-weight: bold;*/
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.footer-distributed ul.footer-links li {
+    list-style: none;
+    /*float: left;*/
+    display: inline;
+}
+
+.footer-distributed ul.footer-links li a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 10px;
+}
+
+.footer-distributed ul.footer-links li:after {
+    margin-right: 10px;
+    content: '-';
+    color: #777;
+}
+
+.footer-distributed ul.footer-links li:last-child:after {
+    margin-right: 0;
+    content: '';
+}
+
+.footer-distributed ul.footer-links li:last-child a {
+    margin-right: 0;
+}
+
+.footer-distributed .footer-right a.facebook:hover {
+    background: #4267b2;
+}
+
+.footer-distributed .footer-right a.instagram:hover {
+    /*background: #f09433;*/
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);*/
+}
+
+.footer-distributed .footer-right a.twitter:hover {
+    background: #1da1f2;
+}
+
+.footer-distributed .footer-right {
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-left: 3px;
+}
+
+p.cname {
+    clear: both;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 769px) {
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-right {
+        text-align: center;
+    }
+
+    .footer-distributed .footer-right {
+        float: none;
+        margin: 0 auto 20px;
+    }
+
+    .footer-distributed .footer-left ul.footer-links {
+        line-height: 1.8;
+        margin: auto;
+    }
+
+    .footer-distributed .footer-left ul.footer-links li {
+        text-align: center;
+    }
+}
+
+@media (max-width: 426px) {
+    .footer-distributed ul.footer-links li a {
+        margin-right: 4px;
+    }
+
+    .footer-distributed ul.footer-links li:after {
+        margin-right: 4px;
+    }
+}

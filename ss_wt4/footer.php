@@ -10,5 +10,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$ssWT4tempalte = new SSWT4_Template( get_template_directory() . '/templates' );
-echo $ssWT4tempalte->render( 'footer' );
+$ssWT4template = new SSWT4_Template( get_template_directory() . '/templates' );
+echo $ssWT4template->render( 'footer' );

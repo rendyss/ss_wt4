@@ -1,25 +1,30 @@
-<footer id="footer">
-    <div class="footer-top">
-        <div class="container">
+<footer class="footer-distributed">
 
-        </div>
+    <div class="footer-right">
+        <!--<div class="socmed">-->
+        <a class="facebook wow bounceIn" data-wow-delay="1.1s" href="#"
+           style="visibility: visible; animation-delay: 1.1s; animation-name: bounceIn;"><i class="fa fa-facebook"></i></a>
+        <a class="twitter wow bounceIn" data-wow-delay="1.2s" href="#"
+           style="visibility: visible; animation-delay: 1.2s; animation-name: bounceIn;"><i
+                    class="fa fa-twitter"></i></a>
+        <a class="instagram wow bounceIn" data-wow-delay="1.3s" href="#"
+           style="visibility: visible; animation-delay: 1.3s; animation-name: bounceIn;"><i class="fa fa-instagram"></i></a>
+        <!--</div>-->
     </div>
 
-    <div class="container">
-        <div class="copyright">
-            &copy; Copyright <strong>Regna</strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            <!--
-			  All the links in the footer should remain intact.
-			  You can delete the links only if you purchased the pro version.
-			  Licensing information: https://bootstrapmade.com/license/
-			  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
-			-->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+    <div class="footer-left">
+		<?php wp_nav_menu( array(
+				'menu'       => 'footer_menu',
+				'menu_class' => 'footer-links',
+				'depth'      => 1,
+				'container'  => '',
+				'walker'     => new SSWT4_Navwalker()
+			)
+		); ?>
+
+        <p class="cname wown" data-wow-delay="1.4s">&copy; <?php echo get_bloginfo( 'name' ) . " " . date( 'Y' ); ?></p>
     </div>
-</footer><!-- #footer -->
+</footer>
 </body>
 <script>
     var $ = jQuery.noConflict();
