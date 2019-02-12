@@ -14,11 +14,11 @@
 
     <div class="footer-left">
 		<?php wp_nav_menu( array(
-				'menu'       => 'footer_menu',
-				'menu_class' => 'footer-links',
-				'depth'      => 1,
-				'container'  => '',
-				'walker'     => new SSWT4_Navwalker()
+				'theme_location' => 'footer_menu',
+				'menu_class'     => 'footer-links',
+				'depth'          => 1,
+				'container'      => '',
+				'walker'         => new SSWT4_Navwalker()
 			)
 		); ?>
 
