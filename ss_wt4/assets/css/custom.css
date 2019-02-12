@@ -162,3 +162,8 @@ p.cname {
         margin-right: 4px;
     }
 }
+
+.sidebar-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}

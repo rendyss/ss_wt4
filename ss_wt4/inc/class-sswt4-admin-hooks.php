@@ -21,10 +21,10 @@ if ( ! class_exists( 'SSWT4_Admin_Hooks' ) ) {
 			register_sidebar( array(
 				'name'          => 'Right sidebar',
 				'id'            => 'right_1',
-				'before_widget' => '<div>',
+				'before_widget' => '<div class="sidebar-item">',
 				'after_widget'  => '</div>',
-				'before_title'  => '<h2 class="rounded">',
-				'after_title'   => '</h2>',
+				'before_title'  => '<h3>',
+				'after_title'   => '</h3>',
 			) );
 		}
 
