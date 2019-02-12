@@ -11,4 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $ssWT4tempalte = new SSWT4_Template( get_template_directory() . '/templates' );
-echo $ssWT4tempalte->render( 'header' );
+echo $ssWT4tempalte->render( 'header', array(
+	'is_front_page' => is_front_page()
+) );

@@ -26,6 +26,7 @@ if ( ! class_exists( 'SSWT4' ) ) {
 			$this->register_public_hooks();
 			$this->register_admin_hooks();
 			$this->load_templates();
+			$this->load_navwalker();
 		}
 
 		function load_front_end_assets() {
@@ -45,6 +46,10 @@ if ( ! class_exists( 'SSWT4' ) ) {
 
 		function load_templates() {
 			require get_template_directory() . '/inc/class-sswt4-template.php';
+		}
+
+		function load_navwalker() {
+			require get_template_directory() . '/inc/class-sswt4-navwalker.php';
 		}
 	}
 }
