@@ -87,17 +87,17 @@ if ( ! class_exists( 'SSWT4_Template' ) ) {
 		 * Execute the template by extracting the variables into scope, and including
 		 * the template file.
 		 *
-		 * @internal param $template
-		 * @internal param $variables
+		 * @param $template
+		 * @param $variables
 		 *
 		 * @return string
 		 */
-		function render_template( /*$template, $variables*/ ) {
+		function render_template( $template, $variables = array() ) {
 			ob_start();
-			foreach ( func_get_args()[1] as $key => $value ) {
+			foreach ( $variables as $key => $value ) {
 				${$key} = $value;
 			}
-			include func_get_args()[0];
+			include $template;
 
 			return ob_get_clean();
 		}
