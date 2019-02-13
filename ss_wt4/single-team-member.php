@@ -28,8 +28,7 @@ while ( have_posts() ) : the_post(); ?>
                             website: <?php echo get_post_meta( get_the_ID(), 'ssteammember_website', true ); ?>, and so
                             on.</p>
 
-						<?php
-						if ( is_active_sidebar( 'right_1' ) ) { ?>
+						<?php if ( is_active_sidebar( 'right_1' ) ) { ?>
                     </div>
                     <div class="col-sm-4">
                         <div class="sidebars">
@@ -37,8 +36,7 @@ while ( have_posts() ) : the_post(); ?>
                         </div>
                     </div>
                 </div>
-			<?php }
-			?>
+			<?php } ?>
             </div>
         </div>
     </main>

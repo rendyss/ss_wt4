@@ -183,3 +183,13 @@ p.cname {
 .list_item span:first-letter {
     text-transform: uppercase;
 }
+
+.err404 {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.err404 h1 {
+    font-size: 100px;
+    font-weight: bold;
+}
