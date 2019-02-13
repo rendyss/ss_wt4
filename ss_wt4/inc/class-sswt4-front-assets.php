@@ -21,7 +21,7 @@ if ( ! class_exists( 'SSWT4_Front_Assets' ) ) {
 		}
 
 		function global_assets_callback() {
-			$path = get_stylesheet_directory_uri();
+			$path = get_template_directory_uri();
 			//include main style
 			wp_enqueue_style( 'style.css', get_stylesheet_uri() );
 
