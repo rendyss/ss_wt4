@@ -17,14 +17,16 @@
     </div>
 
     <div class="footer-left">
-		<?php wp_nav_menu( array(
-				'theme_location' => 'footer_menu',
-				'menu_class'     => 'footer-links',
-				'depth'          => 1,
-				'container'      => '',
-				'walker'         => new SSWT4_Navwalker()
-			)
-		); ?>
+		<?php if ( has_nav_menu( 'footer_menu' ) ) :
+			wp_nav_menu( array(
+					'theme_location' => 'footer_menu',
+					'menu_class'     => 'footer-links',
+					'depth'          => 1,
+					'container'      => '',
+					'walker'         => new SSWT4_Navwalker()
+				)
+			);
+		endif; ?>
 
         <p class="cname wown" data-wow-delay="1.4s">&copy; <?php echo get_bloginfo( 'name' ) . " " . date( 'Y' ); ?></p>
     </div>
