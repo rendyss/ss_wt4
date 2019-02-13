@@ -6,6 +6,8 @@
  * Time: 8:52 AM
  */
 
+global $ssWT4template;
+
 get_header(); ?>
 
     <main>
@@ -14,16 +16,13 @@ get_header(); ?>
                 <h2>Search result for: "<?php echo $s; ?>"</h2>
 				<?php if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
-						global $ssWT4template;
-
 						echo $ssWT4template->render( 'search-list', array(
 							'post_type' => $post->post_type
 						) );
 					endwhile;
 				else:
-					echo "<p>Data not found</p>";
+					echo $ssWT4template->render( 'search-not-found' );
 				endif; ?>
-
             </div>
         </div>
     </main>
