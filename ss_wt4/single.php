@@ -6,6 +6,8 @@
  * Time: 8:48 AM
  */
 
+global $ssWT4template;
+
 get_header();
 
 while ( have_posts() ) : the_post(); ?>
@@ -17,12 +19,7 @@ while ( have_posts() ) : the_post(); ?>
                 <div class="row">
                     <div class="col-sm-8">
 						<?php } ?>
-
-                        <h2><?php the_title(); ?></h2>
-						<?php echo "<p class=\"info\"><i class=\"fa fa-info-circle\"></i> Posted on " . get_the_date() . " by " . get_the_author() . "</p>"; ?>
-
-						<?php the_content(); ?>
-
+						<?php echo $ssWT4template->render( "single" ); ?>
 						<?php if ( is_active_sidebar( 'right_1' ) ) { ?>
                     </div>
                     <div class="col-sm-4">
