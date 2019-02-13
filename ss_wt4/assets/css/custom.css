@@ -181,6 +181,26 @@ p.cname {
     border-bottom: 3px solid #2dca98;
 }
 
+.sidebars .sidebar-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebars .sidebar-item .calendar_wrap table {
+    width: 100%;
+    text-align: center;
+}
+
+.sidebars .sidebar-item .calendar_wrap table tr {
+    border-bottom: 1px solid #fbfbfb;
+}
+
+p.info {
+    color: #888;
+    font-size: small;
+    margin-bottom: 15px;
+}
+
 .list_item {
     border-bottom: 1px dotted #eee;
     padding: 5px 0;
