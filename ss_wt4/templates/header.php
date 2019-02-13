@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php wp_head(); ?>
-<title><?php wp_title(); ?></title>
+<head>
+	<?php wp_head(); ?>
+</head>
 
 <body <?php echo ! $is_front_page ? "class=\"generic\"" : ""; ?>>
 

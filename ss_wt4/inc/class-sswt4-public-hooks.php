@@ -19,6 +19,7 @@ if ( ! class_exists( 'SSWT4_Public_Hooks' ) ) {
 		}
 
 		function set_page_title() {
+			add_theme_support( 'title-tag' );
 			add_filter( 'wp_title', array( $this, 'page_title_callback' ) );
 		}
 
