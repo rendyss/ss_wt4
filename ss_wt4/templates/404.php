@@ -1,3 +1,7 @@
+<?php if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+} ?>
+
 <div class="err404">
     <div class="container">
         <h1>404</h1>

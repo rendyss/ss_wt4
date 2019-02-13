@@ -1,3 +1,7 @@
+<?php if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+} ?>
+
 <h2><?php the_title(); ?></h2>
 <p>You can show individual team member's detail here, but i choose shortcode from the plugin
 	instead</p>

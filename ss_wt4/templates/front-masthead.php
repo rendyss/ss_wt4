@@ -1,3 +1,7 @@
+<?php if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+} ?>
+
 <section id="hero">
     <div class="hero-container">
         <h1>Hi there</h1>

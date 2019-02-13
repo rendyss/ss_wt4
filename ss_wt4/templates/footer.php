@@ -1,3 +1,7 @@
+<?php if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+} ?>
+
 <footer class="footer-distributed">
 
     <div class="footer-right">

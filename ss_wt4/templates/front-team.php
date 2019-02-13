@@ -1,3 +1,7 @@
+<?php if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+} ?>
+
 <section id="team">
     <div class="container wow fadeInUp">
         <div class="section-header">
