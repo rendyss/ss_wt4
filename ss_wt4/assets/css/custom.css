@@ -163,9 +163,22 @@ p.cname {
     }
 }
 
-.sidebar-item {
-    border-bottom: 1px solid #ddd;
+.sidebars {
+
+}
+
+.sidebars .sidebar-item {
+    border-bottom: 1px solid #eee;
     margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.sidebars .sidebar-item h3 {
+    /*margin-bottom: 0;*/
+}
+
+.sidebars .sidebar-item h3:first-letter {
+    border-bottom: 3px solid #2dca98;
 }
 
 .list_item {
