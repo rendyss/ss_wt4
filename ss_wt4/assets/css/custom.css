@@ -167,3 +167,19 @@ p.cname {
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
 }
+
+.list_item {
+    border-bottom: 1px dotted #eee;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.list_item span {
+    font-weight: lighter;
+    display: block;
+    font-style: italic;
+}
+
+.list_item span:first-letter {
+    text-transform: uppercase;
+}

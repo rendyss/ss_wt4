@@ -10,7 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$ssWT4template = new SSWT4_Template( get_template_directory() . '/templates' );
+global $ssWT4template;
+
 echo $ssWT4template->render( 'header', array(
 	'is_front_page' => is_front_page()
 ) );

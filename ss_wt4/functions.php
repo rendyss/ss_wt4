@@ -20,3 +20,5 @@ function sswt4_setup_theme() {
 //Call the main class
 require get_template_directory() . '/inc/class-sswt4.php';
 $ssTestimonialsV2 = SSWT4::Instance();
+
+$ssWT4template = new SSWT4_Template( get_template_directory() . '/templates' );
