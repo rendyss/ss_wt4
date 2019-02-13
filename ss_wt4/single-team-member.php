@@ -24,7 +24,7 @@ while ( have_posts() ) : the_post(); ?>
                     </div>
                     <div class="col-sm-4">
                         <div class="sidebars">
-							<?php dynamic_sidebar( 'right_1' ); ?>
+							<?php get_sidebar(); ?>
                         </div>
                     </div>
                 </div>
