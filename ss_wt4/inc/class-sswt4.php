@@ -27,6 +27,7 @@ if ( ! class_exists( 'SSWT4' ) ) {
 			$this->register_admin_hooks();
 			$this->load_templates();
 			$this->load_navwalker();
+			$this->load_options_page();
 		}
 
 		function load_front_end_assets() {
@@ -50,6 +51,13 @@ if ( ! class_exists( 'SSWT4' ) ) {
 
 		function load_navwalker() {
 			require get_template_directory() . '/inc/class-sswt4-navwalker.php';
+		}
+
+
+		function load_options_page() {
+			define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/' );
+			require_once get_template_directory() . '/inc/options-framework.php';
+			require_once get_template_directory() . '/options.php';
 		}
 	}
 }
