@@ -29,32 +29,11 @@ if ( ! function_exists( 'optionsframework_options' ) ) {
 
 		$options = array();
 
-//	$options[] = array(
-//		'name' => __( 'Global' ),
-//		'type' => 'heading'
-//	);
-//
-//	$options[] = array(
-//		'name' => __( 'Logo' ),
-//		'id'   => 'ss_logo',
-//		'type' => 'upload'
-//	);
-//	$options[] = array(
-//		'name' => __( 'Description' ),
-//		'id'   => 'ss_description',
-//		'type' => 'textarea'
-//	);
-//
-//	$options[] = array(
-//		'name' => __( 'Footer' ),
-//		'type' => 'heading'
-//	);
-//
-//	$options[] = array(
-//		'name' => __( 'Copyright content' ),
-//		'id'   => 'ss_copyright',
-//		'type' => 'textarea'
-//	);
+//		$options[] = array(
+//			'name' => __( 'Logo' ),
+//			'id'   => 'ss_logo',
+//			'type' => 'upload'
+//		);
 
 		return $options;
 	}

@@ -33,14 +33,14 @@ class Options_Framework_Media_Uploader {
 
 		// Gets the unique option id
 		$options_framework = new Options_Framework;
-	    $option_name = $options_framework->get_option_name();
+		$option_name       = $options_framework->get_option_name();
 
 		$output = '';
-		$id = '';
-		$class = '';
-		$int = '';
-		$value = '';
-		$name = '';
+		$id     = '';
+		$class  = '';
+		$int    = '';
+		$value  = '';
+		$name   = '';
 
 		$id = strip_tags( strtolower( $_id ) );
 
@@ -49,17 +49,16 @@ class Options_Framework_Media_Uploader {
 			$value = $_value;
 		}
 
-		if ($_name != '') {
+		if ( $_name != '' ) {
 			$name = $_name;
-		}
-		else {
-			$name = $option_name.'['.$id.']';
+		} else {
+			$name = $option_name . '[' . $id . ']';
 		}
 
 		if ( $value ) {
 			$class = ' has-file';
 		}
-		$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" placeholder="' . __('No file chosen', 'theme-textdomain') .'" />' . "\n";
+		$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="' . $name . '" value="' . $value . '" placeholder="' . __( 'No file chosen', 'theme-textdomain' ) . '" />' . "\n";
 		if ( function_exists( 'wp_enqueue_media' ) ) {
 			if ( ( $value == '' ) ) {
 				$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="' . __( 'Upload', 'theme-textdomain' ) . '" />' . "\n";
@@ -78,24 +77,25 @@ class Options_Framework_Media_Uploader {
 
 		if ( $value != '' ) {
 			$remove = '<a class="remove-image">Remove</a>';
-			$image = preg_match( '/(^.*\.jpg|jpeg|png|gif|ico*)/i', $value );
+			$image  = preg_match( '/(^.*\.jpg|jpeg|png|gif|ico*)/i', $value );
 			if ( $image ) {
 				$output .= '<img src="' . $value . '" alt="" />' . $remove;
 			} else {
 				$parts = explode( "/", $value );
-				for( $i = 0; $i < sizeof( $parts ); ++$i ) {
-					$title = $parts[$i];
+				for ( $i = 0; $i < sizeof( $parts ); ++ $i ) {
+					$title = $parts[ $i ];
 				}
 
 				// No output preview if it's not an image.
 				$output .= '';
 
 				// Standard generic output if it's not an image.
-				$title = __( 'View File', 'theme-textdomain' );
-				$output .= '<div class="no-image"><span class="file_link"><a href="' . $value . '" target="_blank" rel="external">'.$title.'</a></span></div>';
+				$title  = __( 'View File', 'theme-textdomain' );
+				$output .= '<div class="no-image"><span class="file_link"><a href="' . $value . '" target="_blank" rel="external">' . $title . '</a></span></div>';
 			}
 		}
 		$output .= '</div>' . "\n";
+
 		return $output;
 	}
 
@@ -106,13 +106,15 @@ class Options_Framework_Media_Uploader {
 
 		$menu = Options_Framework_Admin::menu_settings();
 
-        if ( substr( $hook, -strlen( $menu['menu_slug'] ) ) !== $menu['menu_slug'] )
-	        return;
+		if ( substr( $hook, - strlen( $menu['menu_slug'] ) ) !== $menu['menu_slug'] ) {
+			return;
+		}
 
-		if ( function_exists( 'wp_enqueue_media' ) )
+		if ( function_exists( 'wp_enqueue_media' ) ) {
 			wp_enqueue_media();
+		}
 
-		wp_register_script( 'of-media-uploader', OPTIONS_FRAMEWORK_DIRECTORY .'js/media-uploader.js', array( 'jquery' ), Options_Framework::VERSION );
+		wp_register_script( 'of-media-uploader', OPTIONS_FRAMEWORK_DIRECTORY . 'js/media-uploader.js', array( 'jquery' ), Options_Framework::VERSION );
 		wp_enqueue_script( 'of-media-uploader' );
 		wp_localize_script( 'of-media-uploader', 'optionsframework_l10n', array(
 			'upload' => __( 'Upload', 'theme-textdomain' ),
